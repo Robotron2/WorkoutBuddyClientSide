@@ -55,6 +55,7 @@ header a {
 	margin: 0;
 	font-size: 0.9em;
 	color: #555;
+	letter-spacing: 1px;
 }
 .workout-details span {
 	position: absolute;

@@ -5,7 +5,7 @@ const WorkoutDetails = ({ workout }) => {
 			<div className="workout-details">
 				<h4>{workout.title}</h4>
 				<p>
-					<strong>Load (kg):</strong>
+					<strong>Load (kg): </strong>
 					{workout.load}
 				</p>
 				<p>
