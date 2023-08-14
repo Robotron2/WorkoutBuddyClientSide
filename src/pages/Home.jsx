@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react"
 import axios from "axios"
 import WorkoutDetails from "../components/WorkoutDetails"
@@ -21,7 +20,7 @@ const Home = () => {
 		}
 
 		fetchWorkout()
-	}, [])
+	}, [dispatch])
 	// console.log(workouts)
 
 	return (

@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
-
+import formatDistanceToNow from "date-fns/formatDistanceToNow"
 /* eslint-disable react/prop-types */
 const WorkoutDetails = ({ workout }) => {
 	const { dispatch } = useWorkoutsContext()
@@ -23,8 +23,10 @@ const WorkoutDetails = ({ workout }) => {
 				<p>
 					<strong>Reps:</strong> {workout.reps}
 				</p>
-				<p>{workout.createdAt}</p>
-				<span onClick={handleClick}>Delete</span>
+				<p>{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}</p>
+				<span onClick={handleClick} className="material-symbols-outlined">
+					delete
+				</span>
 			</div>
 		</>
 	)
